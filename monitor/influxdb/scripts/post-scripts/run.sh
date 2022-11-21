@@ -24,7 +24,8 @@ if [ $i -eq 0 ] ; then
   exit 1
 fi
 
-curl -o /tmp/influxdb_cq.py https://raw.githubusercontent.com/percona/grafana-dashboards/master/misc/influxdb_cq.py > /dev/null
+curl -o /tmp/influxdb_cq.py https://raw.githubusercontent.com/percona/grafana-dashboards/main/misc/influxdb_cq.py > /dev/null
+#curl -o /tmp/influxdb_cq.py https://raw.githubusercontent.com/percona/grafana-dashboards/a4ec800bbddde49d3193080058d629e51255064b/misc/influxdb_cq.py > /dev/null
 
 if [ $? -eq 0 ]
 then
@@ -44,4 +45,4 @@ else
   exit 1
 fi
 
-python /tmp/influxdb_cq.py --exit-on-cq
+python2 /tmp/influxdb_cq.py --exit-on-cq
